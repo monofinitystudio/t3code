@@ -13,6 +13,16 @@
       "command": "vp i && New-Item -ItemType SymbolicLink -Path .env -Target \"$env:T3CODE_PROJECT_ROOT\\.env\" -Force && New-Item -ItemType SymbolicLink -Path \"infra\\relay\\.env\" -Target \"$env:T3CODE_PROJECT_ROOT\\infra\\relay\\.env\" -Force && node apps\\web\\scripts\\warm-dep-cache.ts",
       "icon": "configure",
       "runOnWorktreeCreate": true
+    },
+    {
+      "name": "Workshop status",
+      "command": "pwsh -NoProfile -File scripts/workshop-dev.ps1 status",
+      "icon": "monitor"
+    },
+    {
+      "name": "Restart workshop",
+      "command": "pwsh -NoProfile -File scripts/workshop-dev.ps1 restart",
+      "icon": "refresh"
     }
   ]
 }
